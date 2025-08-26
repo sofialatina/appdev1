@@ -1,0 +1,177 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #181818;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 600;
+  color: #809fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #5577ff;
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: inherit;
+  color: inherit;
+  background-image: radial-gradient(circle at top left, #334, #111);
+  /* subtle gradient for depth */
+}
+
+/* Container */
+.container {
+  max-width: 950px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 40px 35px;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease;
+}
+
+/* NEW: Flex container for heading + image */
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* space between heading and gif */
+  margin-bottom: 20px;
+}
+
+.about-header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Headings */
+h1, h2 {
+  color: inherit;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  border-bottom: 2px solid #e8387b;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 16px;
+  color: #eeaab7;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.15rem;
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+/* Name and Course */
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 6px;
+  color: #ffdbdb;
+}
+
+.course {
+  font-style: italic;
+  color: #c18f8f;
+  margin-bottom: 28px;
+}
+
+/* Fun Fact Image */
+.fun-fact-image {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-top: 0; /* remove top margin to align nicely */
+  box-shadow: 0 4px 15px rgba(85, 119, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+.fun-fact-image:hover {
+  transform: scale(1.05);
+}
+
+/* Light mode override */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #223344;
+    background-color: #fafafa;
+  }
+
+  body {
+    background-image: none;
+  }
+
+  a {
+    color: #5566ff;
+  }
+  a:hover {
+    color: #3344ff;
+  }
+
+  .container {
+    background-color: #fff;
+    box-shadow:
+      0 10px 25px rgba(0, 0, 0, 0.1),
+      inset 0 0 15px rgba(0, 0, 0, 0.02);
+    backdrop-filter: none;
+  }
+
+  h1 {
+    border-bottom-color: #5566ff;
+  }
+
+  h2 {
+    color: #445599;
+  }
+
+  p {
+    color: #334455;
+  }
+
+  .name {
+    color: #112244;
+  }
+
+  .course {
+    color: #667799;
+  }
+
+  .fun-fact-image {
+    box-shadow: 0 4px 15px rgba(85, 119, 255, 0.3);
+  }
+}
