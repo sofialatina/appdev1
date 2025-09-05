@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Background Color Changer</title>
+</head>
+<body>
+
+  <button id="colorBtn">Change Background Color</button>
+  <p id="favoriteColorDisplay"></p>
+  <p id="delayedMessage"></p>
+
+  <script>
+    const btn = document.getElementById('colorBtn');
+    const colorDisplay = document.getElementById('favoriteColorDisplay');
+    const delayedMsg = document.getElementById('delayedMessage');
+
+    btn.addEventListener('click', () => {
+      const favColor = prompt("What's your favorite color?");
+      if (favColor) {
+        document.body.style.backgroundColor = favColor;
+        colorDisplay.textContent = `Your favorite color is: ${favColor}`;
+      }
+    });
+
+    setTimeout(() => {
+      delayedMsg.textContent = "This message appears after 2 seconds";
+    }, 2000);
+  </script>
+
+</body>
+</html>
