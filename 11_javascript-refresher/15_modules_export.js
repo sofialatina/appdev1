@@ -1,5 +1,5 @@
 export default function greet(name) {
-    return "Hello, ${name}! <3";
+    return "Hello, latina! <3";
 }
 
 export const myDetails = {
