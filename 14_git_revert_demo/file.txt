@@ -1,2 +1,3 @@
 "Line 1" 
 "Line 2" 
+"That it kept the file but deleted the most recent addition. It only erased a lil bit of the file but not the whole file, just one of its context." 
