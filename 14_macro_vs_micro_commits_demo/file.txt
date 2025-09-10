@@ -1,0 +1,1 @@
+"when you commit with macro, you add them all at once vs the micro commits that adds them gradually and one by one." 
