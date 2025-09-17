@@ -1,34 +1,34 @@
-function App() {
-  const appStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    height: '60vh',
-    backgroundColor: '#ffffffff',
-    fontFamily: 'Arial, sans-serif',
+import react, { useState } from 'react';
+
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
   };
 
-  const imageStyle = {
-    width: '380px',
-    height: 'auto',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    margin: 20,
-  };
-
-  const user = {
-    imageUrl: 'https://theculturednerd.org/wp-content/uploads/2020/04/Screenshot_20200417-145829_Chrome.jpg',
-    imageSize: '380px',
-    alignItems: 'center',
+  const handleLogout= () => {
+    setIsLoggedIn(false);
   };
 
   return (
-    <div style={appStyle}>
-      <h1>{user.imageUrl}</h1>
-      <img
-        src={user.imageUrl}
-        alt="User"
-        style={{ ...imageStyle, width: user.imageSize, height: user.imageSize }}
-      />
+    <div className="App">
+      <h1>Welcome to Studio Ghibli's App!</h1>
+      {isLoggedIn ? (
+        <div>
+          <h2>Welcome back, User!</h2>
+          <img src="https://theculturednerd.org/wp-content/uploads/2020/04/Screenshot_20200417-145829_Chrome.jpg" alt="Logged In" />
+          <br></br>
+          <button onClick={handleLogout}>Log out</button>
+        </div>
+      ) : (
+        <div>
+          <h2>Please log in.</h2>
+          <img src="https://c4.wallpaperflare.com/wallpaper/764/209/100/movie-my-neighbor-totoro-mei-kusakabe-mini-totoro-my-neighbor-totoro-wallpaper-preview.jpg" alt="Logged Out" />
+          <br></br>
+          <button onClick={handleLogin}>Log in</button>
+        </div>
+      )}
     </div>
 );
 }
