@@ -1,8 +1,8 @@
 function Profile() {
   return (
     <img
-      src="https://i.imgur.com/MK3eW3As.jpg"
-      alt="Katherine Johnson"
+src="https://i.imgur.com/QIrZWGIs.jpg"
+alt="Alan L. Hart"
       style={{
         width: "150px",
         height: "150px",
@@ -13,15 +13,14 @@ function Profile() {
 }
 
 export default function Gallery() {
-  return (
+return (
     <div
       style={{
-        height: "100vh",           // full screen height
-        width: "100vw",            // full screen width
-        display: "flex",           // use flexbox
-        justifyContent: "center",  // horizontal center
-        alignItems: "center",      // vertical center
-        backgroundColor: "#222",   // dark background (optional)
+        height: "100vh",           
+        width: "100vw",            
+        display: "flex",           
+        justifyContent: "center",  
+        alignItems: "center",      
       }}
     >
       <section
