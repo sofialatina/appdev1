@@ -1,14 +1,13 @@
-function Cup({ guest }) {
-return <h2>Tea cup for guest #{guest}</h2>;
-}
+import ComponentA from './components/ComponentA';
+import ComponentC from './components/ComponentC';
 
 
-export default function TeaSet() {
-return (
-<>
-<Cup guest={1} />
-<Cup guest={2} />
-<Cup guest={3} />
-</>
-);
+export default function RootComponent() {
+  return (
+    <div>
+      <h1>Root Component</h1>
+      <ComponentA />
+      <ComponentC />
+    </div>
+  );
 }
