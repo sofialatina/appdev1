@@ -1,33 +1,37 @@
-import { getImageUrl } from './utils/utils.jsx';
-
-function Avatar({ person, size }) {
+function Item({ name, isPacked }) {
   return (
-    <img
-      className="avatar"
-      src={getImageUrl(person)}
-      alt={person.name}
-      width={size}
-      height={size}
-    />
+    <li className="item">
+      {name} {isPacked && '✅'}
+    </li>
   );
 }
 
 
-function Card({ children }) {
-  return <div className="card">{children}</div>;
-}
-
-
-export default function Profile() {
+export default function PackingList() {
   return (
-    <Card>
-      <Avatar
-        size={100}
-        person={{
-          name: 'Katsuko Saruhashi',
-          imageId: 'YfeOqp2'
+    <div
+      style={{
+        height: "100vh",           
+        width: "100vw",            
+        display: "flex",           
+        justifyContent: "center",  
+        alignItems: "center",      
+        backgroundColor: "#222",   
+      }}
+    >
+      <section
+        style={{
+          textAlign: "center",
+          color: "white",
         }}
-      />
-    </Card>
+      >
+      <h1>Sally Ride's Packing List</h1>
+      <ul>
+        <Item isPacked={true} name="Space suit" />
+        <Item isPacked={true} name="Helmet with a golden leaf" />
+        <Item isPacked={false} name="Photo of Tam" />
+      </ul>
+    </section>
+    </div>
   );
 }
